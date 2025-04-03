@@ -9,7 +9,7 @@ class CvController extends Controller
     public function index()
     {
         // Carga los datos del CV desde un archivo
-        $cv = include base_path('cv_data.php');
+        $cv = include base_path('data/cv_data.php');
         return view('cv', compact('cv'));
     }
     public function cv2()
