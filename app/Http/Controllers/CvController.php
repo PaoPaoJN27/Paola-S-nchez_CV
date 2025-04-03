@@ -21,8 +21,12 @@ class CvController extends Controller
     }
 
     $cv = include $ruta;
+
+    dd($cv); // 👈 Esto mostrará el contenido del array y nos dirá si hay error aquí
+
     return view('cv2', compact('cv'));
 }
+
 
     public function downloadPdf()
 {
