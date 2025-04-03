@@ -13,10 +13,17 @@ class CvController extends Controller
         return view('cv', compact('cv'));
     }
     public function cv2()
-    {
-        $cv = include base_path('cv_data.php');
-        return view('cv2', compact('cv'));
+{
+    $ruta = resource_path('data/cv_data.php');
+
+    if (!file_exists($ruta)) {
+        dd("❌ No se encontró el archivo: $ruta");
     }
+
+    $cv = include $ruta;
+    return view('cv2', compact('cv'));
+}
+
     public function downloadPdf()
 {
     $cv = include base_path('cv_data.php'); // Usamos el archivo correcto
