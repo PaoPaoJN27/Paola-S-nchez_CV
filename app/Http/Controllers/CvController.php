@@ -13,16 +13,26 @@ class CvController extends Controller
         return view('cv', compact('cv'));
     }
     public function cv2()
-{
-    $ruta = resource_path('data/cv_data.php');
-
-    if (!file_exists($ruta)) {
-        dd("❌ No se encontró el archivo: $ruta");
+    {
+        try {
+            $ruta = resource_path('data/cv_data.php');
+    
+            if (!file_exists($ruta)) {
+                throw new \Exception("❌ No se encontró el archivo: $ruta");
+            }
+    
+            $cv = include $ruta;
+    
+            if (!is_array($cv)) {
+                throw new \Exception("⚠️ El archivo no devolvió un arreglo válido.");
+            }
+    
+            return view('cv2', compact('cv'));
+        } catch (\Throwable $e) {
+            return response("🚨 Error en cv2(): " . $e->getMessage(), 500);
+        }
     }
-
-    $cv = include $ruta;
-    return view('cv2', compact('cv'));
-}
+    
 
 
     public function downloadPdf()
