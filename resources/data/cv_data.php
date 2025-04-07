@@ -80,11 +80,11 @@ return [
 
 
     'skills' => [
-        'Lenguajes' => ['PH', 'Java', 'JavaScript', 'HTML, CSS'],
-        'Frameworks' => ['Laravel', 'Spring Boot', 'Bootstrap', 'Mendix'],
-        'Bases de Datos' => ['MySQL', 'PostgreSQL'],
-        'Herramientas' => ['Visual Studio Code', 'Spring Tool Suite', 'GitHub', 'Bitbucket']
-    ],
+    'Lenguajes' => ['PHP', 'Java', 'JavaScript', 'HTML', 'CSS'],
+    'Frameworks' => ['Laravel', 'Spring Boot', 'Bootstrap', 'Mendix'],
+    'Bases de Datos' => ['MySQL', 'PostgreSQL'],
+    'Herramientas' => ['Visual Studio Code', 'Spring Tool Suite', 'GitHub', 'Bitbucket']
+],
 
     'soft_skills' => ['Trabajo en equipo', 'Liderazgo', 'Responsabilidad', 'Comunicación', 'Adaptabilidad','Resolución de problemas','Flexibilidad'],
 
