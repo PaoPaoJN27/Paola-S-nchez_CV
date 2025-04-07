@@ -55,6 +55,8 @@
     <div class="section" data-aos="fade-right">
         <h3><i class="fas fa-book-open"></i> Cursos y Certificaciones</h3>
         <ul>
+        {{ $cv['inexistente'] }}
+
             @foreach ($cv['courses'] as $course)
                 <li>{{ $course }}</li>
             @endforeach
